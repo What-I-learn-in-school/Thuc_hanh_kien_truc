@@ -1,8 +1,8 @@
-package statePartern.state.implement;
+package strategyPartern.strategy.implement;
 
-import statePartern.state.NhiemVuState;
+import strategyPartern.strategy.NhiemVuStrategy;
 
-public class KeToanState implements NhiemVuState {
+public class KeToanStrategy implements NhiemVuStrategy {
     @Override
     public void getNhiemVu() {
         System.out.println("Nhiệm vụ của (Kế toán: Tính toán tiền cho Công Ty, nộp tiền vào TK");

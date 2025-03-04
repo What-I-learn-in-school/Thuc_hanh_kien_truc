@@ -16,6 +16,6 @@ public class NhanVienDecorator extends EmployeeDecorator {
     }
 
     private void setNhanVienNhiemVu(NhiemVu decoratedEmployee) {
-        System.out.println("Nhiệm vụ của nhân viên");
+        System.out.println("Nhiệm vụ của Nhân Viên: Pha trà, giữ xe ");
     }
 }

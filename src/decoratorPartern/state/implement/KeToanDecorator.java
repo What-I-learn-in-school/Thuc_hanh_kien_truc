@@ -16,6 +16,6 @@ public class KeToanDecorator extends EmployeeDecorator {
     }
 
     private void setKeToanNhiemVu(NhiemVu decoratedEmployee) {
-        System.out.println("Nhiệm vụ của kế toán");
+        System.out.println("Nhiệm vụ của (Kế toán: Tính toán tiền cho Công Ty, nộp tiền vào TK");
     }
 }

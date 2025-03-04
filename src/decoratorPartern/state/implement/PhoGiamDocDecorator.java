@@ -16,6 +16,6 @@ public class PhoGiamDocDecorator extends EmployeeDecorator {
     }
 
     private void setPhoGiamDocNhiemVu(NhiemVu decoratedEmployee) {
-        System.out.println("Nhiệm vụ của phó giám đốc");
+        System.out.println("Nhiệm vụ của Phó Giám Đốc: Phụ trách khi giám đốc đi vắng");
     }
 }
