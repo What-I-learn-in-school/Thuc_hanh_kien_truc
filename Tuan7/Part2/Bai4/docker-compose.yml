@@ -1,0 +1,39 @@
+version: '3.8'
+
+volumes:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  monitoring_network:
+    driver: bridge
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus_container
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - monitoring_network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana_container
+    volumes:
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - monitoring_network
+
+  docker-exporter:
+    image: prom/node-exporter:latest
+    container_name: docker_exporter_container
+    ports:
+      - "9323:9323"
+    networks:
+      - monitoring_network
